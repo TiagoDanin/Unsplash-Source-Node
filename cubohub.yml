@@ -4,3 +4,6 @@ readme: True
 branch: 'gh-pages'
 links:
   npm: 'https://www.npmjs.com/package/unsplash-source-node'
+gitauthor:
+  name: 'TiagoDanin'
+  email: 'TiagoDanin@outlook.com'
