@@ -1,10 +1,13 @@
 # Unsplash Source Node [![Build Status](https://travis-ci.org/TiagoDanin/Unsplash-Source-Node.png?branch=master)](https://travis-ci.org/TiagoDanin/Unsplash-Source-Node)
 
+
+[![NPM](https://nodei.co/npm/unsplash-source-node.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/unsplash-source-node./)
+
 Wrapper for the Unsplash Source API
 
-## Use
+# Use
 
-# Ger redirectURL
+## Ger redirectURL
 Add the param `redirectURL: true`
 Note: This function use Promise
 
@@ -14,7 +17,7 @@ var url = await unsplash({random: true, redirectURL: true})
 //Return string: https://images.unsplash.com/photo-1515349933451-b95498259b01?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=0f1ac7e4ca80001ea0ec1c2ed6ce08db
 ```
 
-# Basic
+## Basic
 
 - Random all photos
 
@@ -65,7 +68,7 @@ var url = unsplash({search: 'nature,water'})
 //Return string: https://source.unsplash.com/?nature,water/
 ```
 
-# Use with class
+## Use with class
 
 ```javascript
 var unsplash = require('unsplash-source-node')
@@ -78,7 +81,7 @@ var url = myUnsplash.get()
 ```
 
 
-## Installation
+# Installation
 
 This is a [Node.js](https://nodejs.org/) module available through the
 [npm registry](https://www.npmjs.com/). It can be installed using the
@@ -88,11 +91,11 @@ This is a [Node.js](https://nodejs.org/) module available through the
 $ npm install unsplash-source-node
 ```
 
-## Dependencies
+# Dependencies
 
 - [request](https://ghub.io/request): Simplified HTTP request client.
 - [request-promise-native](https://ghub.io/request-promise-native): The simplified HTTP request client &#39;request&#39; with Promise support. Powered by native ES6 promises.
 
-## License
+# License
 
 MIT
