@@ -1,5 +1,6 @@
 var request = require('request-promise-native')
 function classFix() {
+	this.random = (this.random == false) ? false : this.random || this.param.random
 	this.username = (this.username == false) ? false : this.username || this.param.username
 	this.user = (this.user == false) ? false : this.user || this.param.user
 	this.like = (this.like == false) ? false : this.like || this.param.like
@@ -28,6 +29,10 @@ async function redirectURL(url, uri) {
 module.exports = function(param) {
 	var url = 'https://source.unsplash.com'
 	var uri = '/'
+
+	if (param.random) {
+		uri += `random/`
+	}
 
 	if (param.photo) {
 		uri += `${param.photo}/`

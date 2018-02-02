@@ -7,6 +7,7 @@ async function test() {
 	console.log('[+] +1% :)')
 }
 console.log('[+] Executing tests')
+assert.equal(unsplash({random: true}), 'https://source.unsplash.com/random/')
 assert.equal(unsplash({daily: true}), 'https://source.unsplash.com/daily/')
 assert.equal(unsplash({weekly: true}), 'https://source.unsplash.com/weekly/')
 assert.equal(unsplash({username: 'TiagoDanin'}), 'https://source.unsplash.com/user/TiagoDanin/')
