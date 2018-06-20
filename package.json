@@ -1,6 +1,6 @@
 {
   "name": "unsplash-source-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper for the Unsplash Source API",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/TiagoDanin/Unsplash-Source-Node#readme",
   "dependencies": {
-    "request": "2.87.0",
+    "request": "2.83.0",
     "request-promise-native": "1.0.5"
   }
 }

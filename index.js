@@ -61,14 +61,14 @@ module.exports = function(param) {
 		uri += 'weekly/'
 	}
 
-	if (param.search) {
-		uri += `?${param.search}/`
-	} else if (param.keyword) {
-		uri += `?${param.keyword}/`
-	}
-
 	if (param.width && param.height) {
 		uri += `${param.width}x${param.height}/`
+	}
+
+	if (param.search) {
+		uri += `?${param.search}`
+	} else if (param.keyword) {
+		uri += `?${param.keyword}`
 	}
 
 	//Class
