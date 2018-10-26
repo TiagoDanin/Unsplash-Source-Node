@@ -66,9 +66,9 @@ module.exports = function(param) {
 	}
 
 	if (param.search) {
-		uri += `?${param.search}`
+		uri += `?${param.search}/`
 	} else if (param.keyword) {
-		uri += `?${param.keyword}`
+		uri += `?${param.keyword}/`
 	}
 
 	//Class

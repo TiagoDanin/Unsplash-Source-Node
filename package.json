@@ -1,6 +1,6 @@
 {
   "name": "unsplash-source-node",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Wrapper for the Unsplash Source API",
   "main": "index.js",
   "scripts": {
