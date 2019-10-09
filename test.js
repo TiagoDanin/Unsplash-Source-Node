@@ -1,8 +1,8 @@
-var unsplash = require('.')
-var assert = require('assert')
+const unsplash = require('.')
+const assert = require('assert')
 
 async function test() {
-	var url = await unsplash({photo: 'WLUHO9A_xik', redirectURL: true})
+	const url = await unsplash({photo: 'WLUHO9A_xik', redirectURL: true})
 	assert.equal(url, 'https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=f8b660d566957dd3535084dafdf19397')
 	console.log('[+] +1% :)')
 }
@@ -24,7 +24,7 @@ assert.equal(unsplash({collection: '190727'}), 'https://source.unsplash.com/coll
 assert.equal(unsplash({collection_id: '190727'}), 'https://source.unsplash.com/collection/190727/')
 console.log('[+] 50% OK')
 test()
-var myConfig = new unsplash({daily: true})
+let myConfig = new unsplash({daily: true})
 myConfig.keyword = 'nature'
 assert.equal(myConfig.get(), 'https://source.unsplash.com/daily/?nature/')
 myConfig.daily = false

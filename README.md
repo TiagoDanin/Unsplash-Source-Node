@@ -12,8 +12,8 @@ Add the param `redirectURL: true`
 Note: This function use Promise
 
 ```javascript
-var unsplash = require('unsplash-source-node')
-var url = await unsplash({random: true, redirectURL: true})
+const unsplash = require('unsplash-source-node')
+const url = await unsplash({random: true, redirectURL: true})
 //Return string: https://images.unsplash.com/photo-1515349933451-b95498259b01?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=0f1ac7e4ca80001ea0ec1c2ed6ce08db
 ```
 
@@ -22,61 +22,61 @@ var url = await unsplash({random: true, redirectURL: true})
 - Random all photos
 
 ```javascript
-var unsplash = require('unsplash-source-node')
-var url = unsplash({random: true})
+const unsplash = require('unsplash-source-node')
+const url = unsplash({random: true})
 //Return string: https://source.unsplash.com/random/
 ```
 
 - Random from a specific user
 
 ```javascript
-var unsplash = require('unsplash-source-node')
-var url = unsplash({user: 'tiagodanin'})
+const unsplash = require('unsplash-source-node')
+const url = unsplash({user: 'tiagodanin'})
 //Return string: https://source.unsplash.com/user/tiagodanin/
 ```
 
 - Random from a user’s likes
 
 ```javascript
-var unsplash = require('unsplash-source-node')
-var url = unsplash({user: 'tiagodanin', likes: true})
+const unsplash = require('unsplash-source-node')
+const url = unsplash({user: 'tiagodanin', likes: true})
 //Return string: https://source.unsplash.com/user/tiagoDanin/likes/
 ```
 
 - Random from a collection
 
 ```javascript
-var unsplash = require('unsplash-source-node')
-var url = unsplash({collection: '190727', likes: true})
+const unsplash = require('unsplash-source-node')
+const url = unsplash({collection: '190727', likes: true})
 //Return string: https://source.unsplash.com/collection/190727/
 ```
 
 - Fixed daily/weekly photo
 
 ```javascript
-var unsplash = require('unsplash-source-node')
-var urlDaily = unsplash({daily: true})
+const unsplash = require('unsplash-source-node')
+const urlDaily = unsplash({daily: true})
 //Return string: https://source.unsplash.com/daily/
-var urlWeekly = unsplash({weekly: true})
+const urlWeekly = unsplash({weekly: true})
 //Return string: https://source.unsplash.com/weekly/
 ```
 
 - Random search term
 ```javascript
-var unsplash = require('unsplash-source-node')
-var url = unsplash({search: 'nature,water'})
+const unsplash = require('unsplash-source-node')
+const url = unsplash({search: 'nature,water'})
 //Return string: https://source.unsplash.com/?nature,water/
 ```
 
 ## Use with class
 
 ```javascript
-var unsplash = require('unsplash-source-node')
-var myUnsplash = new unsplash({user: 'tiagodanin'})
+const unsplash = require('unsplash-source-node')
+let myUnsplash = new unsplash({user: 'tiagodanin'})
 myUnsplash.likes = true
 myUnsplash.width = 1200
 myUnsplash.height = 600
-var url = myUnsplash.get()
+const url = myUnsplash.get()
 //Return string: https://source.unsplash.com/user/tiagodanin/likes/1200x600/
 ```
 
