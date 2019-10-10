@@ -90,55 +90,55 @@ baseURL: https://tiagodanin.github.io
 <h2 id="ger-redirecturl"><a href="#ger-redirecturl">Ger redirectURL</a></h2>
 <p>Add the param <code>redirectURL: true</code>
 Note: This function use Promise</p>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> url = <span class="hljs-keyword">await</span> unsplash({<span class="hljs-attr">random</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">redirectURL</span>: <span class="hljs-literal">true</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">const</span> url = <span class="hljs-keyword">await</span> unsplash({<span class="hljs-attr">random</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">redirectURL</span>: <span class="hljs-literal">true</span>})
 <span class="hljs-comment">//Return string: https://images.unsplash.com/photo-1515349933451-b95498259b01?ixlib=rb-0.3.5&#x26;q=80&#x26;fm=jpg&#x26;crop=entropy&#x26;cs=tinysrgb&#x26;w=1080&#x26;fit=max&#x26;ixid=eyJhcHBfaWQiOjF9&#x26;s=0f1ac7e4ca80001ea0ec1c2ed6ce08db</span></code></pre>
 <h2 id="basic"><a href="#basic">Basic</a></h2>
 <ul>
 <li>Random all photos</li>
 </ul>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> url = unsplash({<span class="hljs-attr">random</span>: <span class="hljs-literal">true</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">const</span> url = unsplash({<span class="hljs-attr">random</span>: <span class="hljs-literal">true</span>})
 <span class="hljs-comment">//Return string: https://source.unsplash.com/random/</span></code></pre>
 <ul>
 <li>Random from a specific user</li>
 </ul>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> url = unsplash({<span class="hljs-attr">user</span>: <span class="hljs-string">'tiagodanin'</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">const</span> url = unsplash({<span class="hljs-attr">user</span>: <span class="hljs-string">'tiagodanin'</span>})
 <span class="hljs-comment">//Return string: https://source.unsplash.com/user/tiagodanin/</span></code></pre>
 <ul>
 <li>Random from a user’s likes</li>
 </ul>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> url = unsplash({<span class="hljs-attr">user</span>: <span class="hljs-string">'tiagodanin'</span>, <span class="hljs-attr">likes</span>: <span class="hljs-literal">true</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">const</span> url = unsplash({<span class="hljs-attr">user</span>: <span class="hljs-string">'tiagodanin'</span>, <span class="hljs-attr">likes</span>: <span class="hljs-literal">true</span>})
 <span class="hljs-comment">//Return string: https://source.unsplash.com/user/tiagoDanin/likes/</span></code></pre>
 <ul>
 <li>Random from a collection</li>
 </ul>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> url = unsplash({<span class="hljs-attr">collection</span>: <span class="hljs-string">'190727'</span>, <span class="hljs-attr">likes</span>: <span class="hljs-literal">true</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">const</span> url = unsplash({<span class="hljs-attr">collection</span>: <span class="hljs-string">'190727'</span>, <span class="hljs-attr">likes</span>: <span class="hljs-literal">true</span>})
 <span class="hljs-comment">//Return string: https://source.unsplash.com/collection/190727/</span></code></pre>
 <ul>
 <li>Fixed daily/weekly photo</li>
 </ul>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> urlDaily = unsplash({<span class="hljs-attr">daily</span>: <span class="hljs-literal">true</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">const</span> urlDaily = unsplash({<span class="hljs-attr">daily</span>: <span class="hljs-literal">true</span>})
 <span class="hljs-comment">//Return string: https://source.unsplash.com/daily/</span>
-<span class="hljs-keyword">var</span> urlWeekly = unsplash({<span class="hljs-attr">weekly</span>: <span class="hljs-literal">true</span>})
+<span class="hljs-keyword">const</span> urlWeekly = unsplash({<span class="hljs-attr">weekly</span>: <span class="hljs-literal">true</span>})
 <span class="hljs-comment">//Return string: https://source.unsplash.com/weekly/</span></code></pre>
 <ul>
 <li>Random search term</li>
 </ul>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> url = unsplash({<span class="hljs-attr">search</span>: <span class="hljs-string">'nature,water'</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">const</span> url = unsplash({<span class="hljs-attr">search</span>: <span class="hljs-string">'nature,water'</span>})
 <span class="hljs-comment">//Return string: https://source.unsplash.com/?nature,water/</span></code></pre>
 <h2 id="use-with-class"><a href="#use-with-class">Use with class</a></h2>
-<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
-<span class="hljs-keyword">var</span> myUnsplash = <span class="hljs-keyword">new</span> unsplash({<span class="hljs-attr">user</span>: <span class="hljs-string">'tiagodanin'</span>})
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> unsplash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'unsplash-source-node'</span>)
+<span class="hljs-keyword">let</span> myUnsplash = <span class="hljs-keyword">new</span> unsplash({<span class="hljs-attr">user</span>: <span class="hljs-string">'tiagodanin'</span>})
 myUnsplash.likes = <span class="hljs-literal">true</span>
 myUnsplash.width = <span class="hljs-number">1200</span>
 myUnsplash.height = <span class="hljs-number">600</span>
-<span class="hljs-keyword">var</span> url = myUnsplash.get()
+<span class="hljs-keyword">const</span> url = myUnsplash.get()
 <span class="hljs-comment">//Return string: https://source.unsplash.com/user/tiagodanin/likes/1200x600/</span></code></pre>
 <h1 id="installation"><a href="#installation">Installation</a></h1>
 <p>This is a <a href="https://nodejs.org/">Node.js</a> module available through the
@@ -204,7 +204,10 @@ description: Contact Me &amp; Social Media.
 	<li><a href="https://www.npmjs.com/~tiagodanin"><i class="ti-package"></i> NPM</a></li>
 	<li><a href="https://pypi.org/user/TiagoDanin/"><i class="ti-package"></i> Pypi</a></li>
 	<li><a href="https://luarocks.org/modules/tiagodanin/"><i class="ti-package"></i> LuaRocks</a></li>
-	<li><a href="https://stackexchange.com/users/7933368/tiago-danin?tab=accounts"><i class="ti-stack-overflow"></i> StackExchange</a></li>
+	<!--
+		<li><a href="https://stackexchange.com/users/7933368/tiago-danin?tab=accounts"><i class="ti-stack-overflow"></i> StackExchange</a></li>
+	-->
+	<li><a href="https://Linkedin.com/in/tiagodanin/"><i class="ti-linkedin"></i> LinkedIn</a></li>
 	<li><a href="mailto:TiagoDanin@outlook.com"><i class="ti-email"></i> Email</a></li>
 </ul>
 <ul class="uk-child-width-expand@s uk-margin-auto uk-text-center" uk-grid="">
