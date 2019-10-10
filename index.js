@@ -1,4 +1,5 @@
-var request = require('request-promise-native')
+const request = require('request-promise-native')
+
 function classFix() {
 	this.random = (this.random == false) ? false : this.random || this.param.random
 	this.username = (this.username == false) ? false : this.username || this.param.username
@@ -18,7 +19,7 @@ function classFix() {
 }
 
 async function redirectURL(url, uri) {
-	var data = await request({
+	const data = await request({
 		baseUrl: url,
 		uri: uri,
 		resolveWithFullResponse: true
@@ -27,8 +28,8 @@ async function redirectURL(url, uri) {
 }
 
 module.exports = function(param) {
-	var url = 'https://source.unsplash.com'
-	var uri = '/'
+	const url = 'https://source.unsplash.com'
+	let uri = '/'
 
 	if (param.random) {
 		uri += `random/`
